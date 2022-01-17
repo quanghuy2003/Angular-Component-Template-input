@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Product} from "../model/product";
 import {Article} from "../article";
+import {FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-product',
@@ -8,7 +9,7 @@ import {Article} from "../article";
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  product : Product = {};
+  // product : Product = {};
   listProduct: Product[]=[
   {
     id : '1',
@@ -31,8 +32,15 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  productForm = new FormGroup({
+    id: new FormControl(''),
+    name: new FormControl(''),
+    price: new FormControl('')
+  });
+
   addNewProduct() {
-    this.listProduct.push(this.product);
+    this.listProduct.push(this.productForm.value)
+    // this.listProduct.push(this.product);
   }
 
 }

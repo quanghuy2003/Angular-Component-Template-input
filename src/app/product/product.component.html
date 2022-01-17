@@ -1,22 +1,43 @@
+<!--<div *ngFor="let pro of listProduct">-->
+<!--<h1>{{pro.name}} giá {{pro.price}}</h1>-->
+<!--</div>-->
+<!--<div>-->
+<!--  <table>-->
+<!--    <tr>-->
+<!--      <td>name:</td>-->
+<!--      <td><textarea [(ngModel)]="product.name" cols="70"></textarea></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>price:</td>-->
+<!--      <td>-->
+<!--        <textarea [(ngModel)]="product.price" cols="70"></textarea>-->
+<!--      </td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td></td>-->
+<!--      <td><button style="float: right" (click)="addNewProduct()">Add</button></td>-->
+<!--    </tr>-->
+<!--  </table>-->
+<!--</div>-->
+<!--<hr>-->
+
+
 <div *ngFor="let pro of listProduct">
-<h1>{{pro.name}} giá {{pro.price}}</h1>
+  <h1>{{pro.name}} giá {{pro.price}}</h1>
 </div>
-<div>
-  <table>
-    <tr>
-      <td>name:</td>
-      <td><textarea [(ngModel)]="product.name" cols="70"></textarea></td>
-    </tr>
-    <tr>
-      <td>price:</td>
-      <td>
-        <textarea [(ngModel)]="product.price" cols="70"></textarea>
-      </td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><button style="float: right" (click)="addNewProduct()">Add</button></td>
-    </tr>
-  </table>
-</div>
-<hr>
+<form [formGroup]="productForm" (submit)="addNewProduct()">
+
+  <label>
+    id:
+    <input type="text" formControlName="id">
+  </label>
+  <label>
+    Name:
+    <input type="text" formControlName="name">
+  </label>
+  <label>
+    Price:
+    <input type="text" formControlName="price">
+  </label>
+  <button type="submit">Submit </button>
+</form>
