@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { BirthdayComponent } from './birthday/birthday.component';
 import {ArticleComponent} from "./article/article.component";
 import {LikeComponent} from "./like/like.component";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { NameCardComponent } from './name-card/name-card.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +17,13 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
     ArticleComponent,
     LikeComponent,
     NameCardComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
