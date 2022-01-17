@@ -9,6 +9,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { NameCardComponent } from './name-card/name-card.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { FormComponent } from './form/form.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormComponent } from './form/form.component';
     LikeComponent,
     NameCardComponent,
     ProgressBarComponent,
-    FormComponent
+    FormComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
