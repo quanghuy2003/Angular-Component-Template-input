@@ -1,0 +1,19 @@
+<div *ngFor="let s of listStudent">
+  <h1>{{s.name}} tuổi {{s.age}}</h1>
+</div>
+<form [formGroup]="studentForm" (submit)="addNewStudent()">
+
+  <label>
+    id:
+    <input type="text" formControlName="id">
+  </label>
+  <label>
+    Name:
+    <input type="text" formControlName="name">
+  </label>
+  <label>
+    age:
+    <input type="text" formControlName="age">
+  </label>
+  <button type="submit">Submit </button>
+</form>

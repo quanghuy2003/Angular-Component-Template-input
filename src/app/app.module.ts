@@ -10,6 +10,7 @@ import { NameCardComponent } from './name-card/name-card.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { FormComponent } from './form/form.component';
 import { ProductComponent } from './product/product.component';
+import { StudentComponent } from './student/student.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProductComponent } from './product/product.component';
     NameCardComponent,
     ProgressBarComponent,
     FormComponent,
-    ProductComponent
+    ProductComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,
