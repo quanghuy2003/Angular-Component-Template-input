@@ -11,6 +11,7 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { FormComponent } from './form/form.component';
 import { ProductComponent } from './product/product.component';
 import { StudentComponent } from './student/student.component';
+import { TodoComponent } from './todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { StudentComponent } from './student/student.component';
     ProgressBarComponent,
     FormComponent,
     ProductComponent,
-    StudentComponent
+    StudentComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
