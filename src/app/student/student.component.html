@@ -4,16 +4,22 @@
 <form [formGroup]="studentForm" (submit)="addNewStudent()">
 
   <label>
-    id:
-    <input type="text" formControlName="id">
-  </label>
-  <label>
     Name:
     <input type="text" formControlName="name">
+    <div class="col alert alert-danger" role="alert"
+         *ngIf="studentForm.controls['name'].errors?.['required']
+         && studentForm.controls['name'].touched">
+      name is required!
+    </div>
   </label>
   <label>
     age:
     <input type="text" formControlName="age">
+    <div class="col alert alert-danger" role="alert"
+         *ngIf="studentForm.controls['age'].errors?.['min']
+         && studentForm.controls['age'].touched">
+      Age is greater than 18!
+    </div>
   </label>
-  <button type="submit">Submit </button>
+  <button type="submit" [disabled]="!studentForm.valid">Submit </button>
 </form>

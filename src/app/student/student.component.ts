@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup } from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Student} from "../model/student";
 
 @Component({
@@ -34,8 +34,8 @@ export class StudentComponent implements OnInit {
 
   studentForm = new FormGroup({
     id: new FormControl(''),
-    name: new FormControl(''),
-    age: new FormControl(''),
+    name: new FormControl('',Validators.required),
+    age: new FormControl('',[Validators.required,Validators.min(18)]),
   });
 
   addNewStudent() {
