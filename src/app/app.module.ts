@@ -12,6 +12,7 @@ import { FormComponent } from './form/form.component';
 import { ProductComponent } from './product/product.component';
 import { StudentComponent } from './student/student.component';
 import { TodoComponent } from './todo/todo.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TodoComponent } from './todo/todo.component';
     FormComponent,
     ProductComponent,
     StudentComponent,
-    TodoComponent
+    TodoComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

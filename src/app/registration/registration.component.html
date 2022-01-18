@@ -1,0 +1,31 @@
+<div *ngFor="let r of listRegistration">
+  <h1>{{r.email}} , {{r.password}} , {{r.country}}, {{r.age}}, {{r.gender}}, {{r.phone}}</h1>
+</div>
+<form [formGroup]="registrationForm" (submit)="addNewProduct()">
+
+  <label>
+    email:
+    <input type="text" formControlName="email">
+  </label>
+  <label>
+    password:
+    <input type="text" formControlName="password">
+  </label>
+  <label>
+    country:
+    <input type="text" formControlName="country">
+  </label>
+  <label>
+    age:
+    <input type="text" formControlName="age">
+  </label>
+  <label>
+    gender:
+    <input type="text" formControlName="gender">
+  </label>
+  <label>
+    phone:
+    <input type="text" formControlName="phone">
+  </label>
+  <button type="submit">đăng ký </button>
+</form>
