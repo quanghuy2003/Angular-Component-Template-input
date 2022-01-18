@@ -1,8 +1,5 @@
 import { Injectable } from '@angular/core';
-import { differenceInYears } from 'date-fns';
-import { differenceInMonths } from 'date-fns/esm';
-import { addMonths } from 'date-fns/esm/fp';
-import { addYears } from 'date-fns/fp';
+import {addMonths, addYears, differenceInDays, differenceInMonths, differenceInYears} from 'date-fns';
 
 @Injectable({
   providedIn: 'root'
@@ -18,18 +15,15 @@ export class DateUtilService {
     const years = differenceInYears(now, diff);
     if (years > 0) {
       result.push(`${years} years`);
-      // @ts-ignore
       diff = addYears(diff, years);
     }
 
     const months = differenceInMonths(now, diff);
     result.push(`${months} months`);
     if (months > 0) {
-      // @ts-ignore
       diff = addMonths(diff, months);
     }
 
-    // @ts-ignore
     const days = differenceInDays(now, diff);
     if (days > 0) {
       result.push(`${days} days`);
